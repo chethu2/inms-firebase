@@ -1,0 +1,64 @@
+syntax = "proto3";
+
+package inms;
+
+service Detection {
+	rpc UpdateDetectedIngredients( DetectedIngredientsRequest ) returns ( DetectedIngredientsResponse ) {}
+}
+
+service BackendRequests {
+	rpc GetIngredients( GetIngredientsRequest ) returns ( GetIngredientsResponse ) {}
+	rpc GetRecipes ( GetRecipesRequest ) returns ( GetRecipesResponse ) {}
+}
+
+message DetectedIngredientsRequest{
+	string container_id = 1;
+	repeated string ingredients = 2;
+}
+
+message DetectedIngredientsResponse{
+	Status status = 1;
+}
+
+message GetIngredientsRequest {
+	string container_id = 1;
+}
+
+message GetIngredientsResponse{
+	repeated string ingredients = 1;
+	Status status = 2;
+}
+
+message GetRecipesRequest {
+	string container_id = 1;
+	repeated string ingredients = 2;
+	repeated string health_labels = 3;
+}
+
+message GetRecipesResponse {
+	repeated Recipes recipes = 1;
+	Status status = 2;
+}
+
+message Recipes {
+	string recipe_name = 1;
+	repeated string ingredients = 2;
+	string image_url = 3;
+	string preparation_time = 4;
+	double calorie_count = 5;
+	string preparation_url = 6;
+	
+}
+
+message Status {
+	StatusCode status_code = 1;
+	string description = 2;
+}
+
+enum StatusCode 
+{
+   UNKNOWN = 0;
+   SUCCESS = 1;
+   NOT_FOUND = 2;
+   FAILURE = 3;
+}

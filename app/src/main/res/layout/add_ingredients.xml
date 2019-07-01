@@ -1,0 +1,61 @@
+<LinearLayout android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent"
+    android:orientation="vertical"
+    android:weightSum="10">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="top"
+        android:layout_marginTop="10dip"
+        android:background="#228B22">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:padding="@dimen/fab_margin"
+            android:text="Add Ingredients to the refrigerator!!"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textAlignment="center"/>
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dip"
+        android:layout_weight="3">
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/add_ingredient"/>
+
+        <Button
+            android:id="@+id/proceed_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:text="proceed"
+            android:textColor="@color/green"
+            android:layout_alignParentRight="true"
+            android:hint="Add Ingredients.. "/>
+
+        <Button
+            android:id="@+id/add_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="right"
+            android:layout_weight="1"
+            android:text="ADD More"
+            android:textColor="@color/green"
+            android:layout_alignParentLeft="true" />
+    </RelativeLayout>
+</LinearLayout>

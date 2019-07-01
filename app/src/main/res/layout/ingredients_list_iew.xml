@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="2.5dp"
+    android:paddingBottom="2.5dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp">
+
+        <!-- ListRow Left sied Thumbnail image -->
+        <LinearLayout
+
+            android:id="@+id/thumbnail1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="7dip"
+            android:padding="2dip"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <ImageView
+                android:id="@+id/list_image"
+                android:layout_width="5dp"
+                android:layout_height="50dp"
+                android:layout_weight="2"
+                android:src="@drawable/onion" />
+
+            <CheckedTextView
+                android:id="@+id/simpleCheckedTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:checked="false"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="Checked Text "
+                android:layout_weight="3"
+                android:textSize="17dp"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/expiry"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:checked="false"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="Text"
+                android:layout_weight="1"
+                android:textSize="17dp"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+</LinearLayout>

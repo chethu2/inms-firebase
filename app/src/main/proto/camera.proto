@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package camera;
+
+service ImageDetection {
+	rpc SendUrl(UrlRequest) returns (UrlResponse) {}
+}
+
+message UrlRequest{
+	string image_url = 1;
+}
+
+message UrlResponse{
+	string response = 1;
+}
